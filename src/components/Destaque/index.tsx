@@ -1,6 +1,10 @@
 import { DestaqueTitle, DestaqueText, DestaqueContainer, DestaqueCardFilme, CardFilme, CardFilme2 } from './styled';
+import { GetServerSideProps, GetStaticProps } from 'next'
+import axios from 'axios';
+import { useEffect } from 'react';
 
-export default function Destaque(){
+export default function Destaque({dado}){
+
     return(
         <DestaqueContainer>
             <DestaqueTitle>Mundo nerd? <br/>Naped!</DestaqueTitle>
@@ -17,3 +21,14 @@ export default function Destaque(){
         </DestaqueContainer>
     )
 }
+
+  export const getServerSideProps: GetServerSideProps = async(context) => {
+
+     const response = await axios.get('https://api.github.com/')
+
+    const dado = await response.data
+    console.log(dado)
+    return {
+        props:{dado}
+    }
+  }

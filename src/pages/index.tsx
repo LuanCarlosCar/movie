@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import Destaque from '../components/Destaque'
 import Header from '../components/Header'
 
 export default function Home() {
@@ -14,6 +15,10 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lexend+Deca&display=swap" rel="stylesheet" />
       </Head>
       <Header />
+      <main className={styles.containerMain}>
+        <Destaque />
+        
+      </main>
       
     </div>
   )

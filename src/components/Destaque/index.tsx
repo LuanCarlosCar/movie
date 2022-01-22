@@ -1,4 +1,4 @@
-import { DestaqueTitle, DestaqueText, DestaqueContainer } from './styled';
+import { DestaqueTitle, DestaqueText, DestaqueContainer, DestaqueCardFilme, CardFilme, CardFilme2 } from './styled';
 
 export default function Destaque(){
     return(
@@ -7,9 +7,12 @@ export default function Destaque(){
             <DestaqueText>O Naped pode ser sua fonte de informações sobre <br/> o mundo nerd e outros assuntos relacionados</DestaqueText>
             
             <ul>
-                <li><span>Status</span> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie dolor.</p></li>
-                <li><span>Status</span> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie dolor.</p></li>
-                <li><span>Status</span> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie dolor.</p></li>
+                <DestaqueCardFilme><span>Status</span> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie dolor.</p></DestaqueCardFilme>
+                <div>
+                <CardFilme><span>Status</span> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie dolor.</p></CardFilme>
+                <CardFilme2><span>Status</span> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie dolor.</p></CardFilme2>
+
+                </div>
             </ul>
         </DestaqueContainer>
     )
